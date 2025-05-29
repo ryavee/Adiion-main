@@ -1,0 +1,21 @@
+.career-container {
+  min-height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 40px 20px;
+  font-family: Arial, sans-serif;
+  color: #15157d;
+}
+
+.career-container h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.career-container p {
+  font-size: 1.3rem;
+  color: #fb71a2;
+}

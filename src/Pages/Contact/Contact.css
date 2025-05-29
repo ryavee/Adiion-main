@@ -1,0 +1,111 @@
+/* === Banner Section === */
+.contact-banner {
+  background-image: url('../../images/contact.jpg'); 
+  background-size: cover;
+  background-position: center;
+  height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.banner-overlay {
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  padding: 40px;
+  border-radius: 10px;
+  text-align: center;
+  max-width: 800px;
+}
+
+.banner-overlay h2 {
+  font-size: 2.8rem;
+  margin-bottom: 15px;
+}
+
+.banner-overlay p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+/* === Contact Section === */
+.contact {
+  background-color: #f0f4ff;
+  padding: 60px 20px;
+}
+
+.contact-main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.contact-left, .contact-right {
+  flex: 1;
+  min-width: 300px;
+  max-width: 500px;
+}
+
+.contact-left h3,
+.contact-right h3 {
+  color: #15157d;
+  margin-bottom: 20px;
+}
+
+.contact-left p {
+  font-size: 1rem;
+  color: #333;
+  line-height: 1.8;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.contact-left .icon {
+  color: #15157d;
+  font-size: 1.2rem;
+}
+
+/* === Contact Form === */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-form label {
+  font-weight: 500;
+  color: #000;
+  margin-top: 0px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  resize: none;
+  background-color: #fff;
+}
+
+.contact-form button {
+  background-color: #000;          /* Pure black base */
+  color: #fff;
+  padding: 12px 24px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 10px;
+  align-self: flex-start;
+}
+
+.contact-form button:hover {
+  background-color: #222;          /* Soft black on hover */
+}

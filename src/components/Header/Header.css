@@ -1,0 +1,86 @@
+.header {
+  background-color: rgba(255, 255, 255, 1); /* Solid white initially */
+  height: 80px;
+  padding: 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  transition: background-color 0.4s ease; /* Smooth transition */
+}
+
+.header.transparent {
+  background-color: rgba(255, 255, 255, 0.8); /* Slightly transparent */
+  backdrop-filter: blur(6px); /* Optional: adds nice blur effect */
+}
+
+  
+  .header-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #0a0a0a;
+    margin-right: 40px;
+  }
+  
+  /* Main nav container spans full width beside logo */
+  .nav {
+    display: flex;
+    justify-content: space-between;
+    flex: 1;
+    align-items: center;
+  }
+  
+  /* Left group of links (next to logo) */
+  .nav {
+    display: flex;
+    align-items: center;
+    width: 100%; /* Ensure it stretches across the remaining space after the logo */
+  }
+  
+  
+  /* Rightmost Contact link */
+  .nav-right {
+    margin-left: auto;
+    /* border: #15157d; */
+  }
+  
+  /* Link styles */
+  .nav-left a,
+  .nav-right a {
+    color: #0a0a0a;
+    margin-left: 20px;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight:500;
+    transition: color 0.3s;
+  }
+  
+  .nav-left a:hover,
+  .nav-right a:hover {
+    color: #fb71a2;
+  }
+
+  
+  .contact-btn {
+    border: 2px solid #15157d;
+    padding: 1px 16px;
+    border-radius: 4px;
+    color: #15157d;
+    font-weight: 500;
+
+  }
+  /* Highlight current page's link */
+.nav-left a.active,
+.nav-right a.active {
+  color: #fb71a2;
+  font-weight: 600;
+}
