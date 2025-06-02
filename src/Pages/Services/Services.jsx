@@ -1,101 +1,195 @@
-import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState,useEffect } from 'react';
+import './Services.css';
+import {
+  FaMobileAlt, FaLaptopCode, FaDatabase, FaBullhorn, FaRobot,
+  FaCloud, FaShieldAlt, FaHeadset, FaUserTie, FaShoppingCart,
+  FaUserClock, FaPlus, FaMinus
+} from 'react-icons/fa';
+import softwareImg from './images/hero/software.jpg';
 
-import software from './images/hero/software.jpg';
-import web from './images/hero/web.jpg';
-import app from './images/hero/app.jpg';
-import consulting from './images/hero/consulting.avif';
-import portfolio from './images/hero/portfolio.avif';
-
-import appdev from './images/vector/app.png';
-import datasol from './images/vector/brandcommunication.png';
-import marketing from './images/vector/searchmark.png';
-import webdev from './images/vector/web-deve.png';
-
-const slides = [
-  { image: software, caption: 'Software Development' },
-  { image: web, caption: 'Web Development' },
-  { image: app, caption: 'App Development' },
-  { image: consulting, caption: ' Data Solution ' },
-  { image: portfolio, caption: 'Digital Marketing' },
+const serviceData = [
+  {
+    title: 'App Development',
+    icon: <FaMobileAlt />,
+    description: [
+      'Seamless apps for iOS & Android.',
+      'Boost business reach and usability.',
+      'Custom, scalable solutions.'
+    ]
+  },
+  {
+    title: 'Web Development',
+    icon: <FaLaptopCode />,
+    description: [
+      'Responsive modern websites.',
+      'Web apps that scale with you.',
+      'SEO and performance optimized.'
+    ]
+  },
+  {
+    title: 'Data Solutions',
+    icon: <FaDatabase />,
+    description: [
+      'Analytics and warehousing.',
+      'Data-driven decision making.',
+      'Optimized strategies for growth.'
+    ]
+  },
+  {
+    title: 'Digital Marketing',
+    icon: <FaBullhorn />,
+    description: [
+      'SEO, SEM, and social media.',
+      'Targeted campaigns to engage.',
+      'Comprehensive analytics reporting.'
+    ]
+  },
+  {
+    title: 'AI & Automation',
+    icon: <FaRobot />,
+    description: [
+      'Intelligent automation solutions.',
+      'Machine learning to optimize.',
+      'Streamline business processes.'
+    ]
+  },
+  {
+    title: 'Cloud & Infrastructure',
+    icon: <FaCloud />,
+    description: [
+      'Secure cloud hosting.',
+      'Scalable infrastructure support.',
+      'Reliable and cost-effective.'
+    ]
+  },
+  {
+    title: 'Cybersecurity',
+    icon: <FaShieldAlt />,
+    description: [
+      'Advanced threat protection.',
+      'Secure your digital assets.',
+      'Latest cybersecurity protocols.'
+    ]
+  },
+  {
+    title: 'BPO & Outsourcing',
+    icon: <FaHeadset />,
+    description: [
+      'Affordable support operations.',
+      'Scalable business processes.',
+      'Expert service delivery.'
+    ]
+  },
+  {
+    title: 'Recruitment & Consulting',
+    icon: <FaUserTie />,
+    description: [
+      'Strategic hiring solutions.',
+      'Workforce consulting.',
+      'Build your best team.'
+    ]
+  },
+  {
+    title: 'Ecommerce Solutions',
+    icon: <FaShoppingCart />,
+    description: [
+      'Robust online store platforms.',
+      'Easy product management.',
+      'Seamless shopping experiences.'
+    ]
+  },
+  {
+    title: 'Virtual Assistance',
+    icon: <FaUserClock />,
+    description: [
+      'Remote executive assistants.',
+      'Back-office support services.',
+      'Flexible, reliable help.'
+    ]
+  },
 ];
 
-function Services() {
-  const [currentIndex, setCurrentIndex] = useState(0);
-
+export default function Services() {
   useEffect(() => {
-    const timer = setInterval(() => {
-      setCurrentIndex((prevIndex) =>
-        prevIndex === slides.length - 1 ? 0 : prevIndex + 1
-      );
-    }, 5000);
-
-    return () => clearInterval(timer);
+    window.scrollTo(0, 0); // 👈 Scroll to top on mount
   }, []);
+  const [activeCard, setActiveCard] = useState(null);
+
+  const toggleCard = (index) => {
+    setActiveCard(activeCard === index ? null : index);
+  };
 
   return (
-    <section className="relative bg-gradient-to-br from-blue-100 to-white pt-4 pb-20 md:pt-0 md:pb-28">
-      {/* Image Slider */}
-      <div className="relative w-full h-[250px] md:h-[350px] lg:h-[450px] overflow-hidden mb-8">
-        {slides.map((slide, index) => (
-          <div
-            key={index}
-            className={`absolute w-full h-full transition-opacity duration-1000 ${index === currentIndex ? 'opacity-100 z-10' : 'opacity-0 z-0'}`}
-          >
-            <img
-              src={slide.image}
-              alt={slide.caption}
-              className="w-full h-full object-cover"
-            />
-            <div className="absolute bottom-0 w-full h-full bg-black bg-opacity-60 text-white text-sm md:text-lg lg:text-xl px-8 py-12 md:px-40 md:py-40  text-center font-bold">
-              {slide.caption}
-            </div>
-          </div>
-        ))}
+    <div className="services-page">
+      {/* Banner */}
+      <div className="services-page__banner" style={{ backgroundImage: `url(${softwareImg})` }}>
+        <div className="services-page__banner-overlay"></div>
+        <div className="services-page__banner-content">
+          <h1>Your Digital Transformation Partner</h1>
+          <p>Scalable, secure, and smart solutions tailored for modern businesses</p>
+        </div>
       </div>
 
-      {/* Title and Subtitle */}
-      <div className="max-w-6xl mx-auto px-4 text-center">
-        <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight mb-6">
-          Transforming Ideas into <span className="text-blue-600">Digital Excellence</span>
-        </h1>
-        <p className="text-lg text-gray-700 max-w-3xl mx-auto leading-relaxed mb-10">
+      {/* Introduction */}
+      <div className="services-page__intro">
+        <h2>Transforming Ideas into <span>Digital Excellence</span></h2>
+        <p>
           Adiion delivers cutting-edge technology solutions that drive business growth and innovation across industries.
         </p>
       </div>
 
       {/* Services Grid */}
-      <div className="flex justify-center flex-wrap gap-12 px-4 text-center bg-gray-50 py-6">
-        <div className="flex flex-col items-center w-[250px] transition-transform duration-300 hover:scale-105">
-          <Link to="/appdevelopment">
-            <img src={appdev} alt="App Development" className="w-[150px] h-[150px] mb-2 opacity-80 cursor-pointer transition-transform duration-300" />
-          </Link>
-          <p className="text-gray-900 text-base font-sans">APP DEVELOPMENT</p>
-        </div>
-        <div className="flex flex-col items-center w-[250px] transition-transform duration-300 hover:scale-105">
-          <Link to="/webdevelopment">
-            <img src={webdev} alt="Web Development" className="w-[150px] h-[150px] mb-2 opacity-80 cursor-pointer transition-transform duration-300" />
-          </Link>
-          <p className="text-gray-900 text-base font-sans">WEB DEVELOPMENT</p>
-        </div>
-        <div className="flex flex-col items-center w-[250px] transition-transform duration-300 hover:scale-105">
-          <Link to="/datasolutions">
-            <img src={datasol} alt="Data Solutions" className="w-[150px] h-[150px] mb-2 opacity-80 cursor-pointer transition-transform duration-300" />
-          </Link>
-          <p className="text-gray-900 text-base font-sans">DATA SOLUTIONS</p>
-        </div>
-        <div className="flex flex-col items-center w-[250px] transition-transform duration-300 hover:scale-105">
-          <Link to="/marketing">
-            <img src={marketing} alt="Digital Marketing" className="w-[150px] h-[150px] mb-2 opacity-80 cursor-pointer transition-transform duration-300" />
-          </Link>
-          <p className="text-gray-900 text-base font-sans">DIGITAL MARKETING</p>
-        </div>
+      <div className="services-page__grid">
+        {serviceData.map((service, index) => {
+          const isActive = activeCard === index;
+
+          return (
+            <div
+              key={index}
+              className={`services-page__card ${isActive ? 'active' : ''}`}
+            >
+              <div
+                className="services-page__card-content"
+                onClick={() => toggleCard(index)}
+                role="button"
+                tabIndex={0}
+                onKeyPress={(e) => e.key === 'Enter' && toggleCard(index)}
+                aria-expanded={isActive}
+                aria-controls={`service-desc-${index}`}
+              >
+                <div className="services-page__card-left">
+                  <div className="services-page__icon">{service.icon}</div>
+                  <h3 className="services-page__title">{service.title}</h3>
+                </div>
+                <button
+                  className="services-page__toggle-btn"
+                  aria-label={isActive ? `Collapse ${service.title} details` : `Expand ${service.title} details`}
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    toggleCard(index);
+                  }}
+                >
+                  {isActive ? <FaMinus /> : <FaPlus />}
+                </button>
+              </div>
+
+              {isActive && (
+                <ul className="services-page__description" id={`service-desc-${index}`}>
+                  {service.description.map((point, i) => (
+                    <li key={i}>{point}</li>
+                  ))}
+                </ul>
+              )}
+            </div>
+          );
+        })}
       </div>
 
-      {/* Bottom Gradient */}
-      <div className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-white to-transparent"></div>
-    </section>
+      {/* CTA Section */}
+      <div className="services-page__cta">
+        <h2>Ready to Elevate Your Business?</h2>
+        <a href="/contact" className="services-page__cta-button">Contact Us Today</a>
+      </div>
+    </div>
   );
 }
-
-export default Services;

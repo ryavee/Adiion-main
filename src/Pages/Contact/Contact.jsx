@@ -1,8 +1,13 @@
 import React from 'react';
+import { useEffect } from 'react';
+
 import './Contact.css';
 import { FaMapMarkerAlt, FaEnvelope, FaPhone } from 'react-icons/fa';
 
 const Contact = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0); // 👈 Scroll to top on mount
+  }, []);
   return (
     <>
       {/* Banner Section */}
@@ -24,9 +29,12 @@ const Contact = () => {
           {/* Left Side - Contact Info */}
           <div className="contact-left">
             <h3>Our Office</h3>
-            <p><FaMapMarkerAlt className="icon" /> Adiion Tower, Chennai, Tamil Nadu, India</p>
+            
+            <p><FaMapMarkerAlt className="icon" /> 73C, 74C, 2nd Floor, S Park St, Secretariat Colony, Venkatapuram
+            Ambattur, Chennai
+            Tamil Nadu IN 600053</p>
             <p><FaEnvelope className="icon" /> info@adiion.com</p>
-            <p><FaPhone className="icon" /> +91-9876543210</p>
+            <p><FaPhone className="icon" /> +91-7029395817</p>
           </div>
 
           {/* Right Side - Contact Form */}
