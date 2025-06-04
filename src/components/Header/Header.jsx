@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import './Header.css';
-import logoImg from './logo.png'; // Adjust the path as per your project structure
+import logoImg from './logo2.svg'; // Adjust the path as per your project structure
 
 const Header = () => {
   const [isTransparent, setIsTransparent] = useState(false);
