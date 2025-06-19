@@ -1,5 +1,7 @@
 import React from 'react';
 import { Facebook, Twitter, Linkedin, Instagram } from 'lucide-react';
+import { LuFacebook } from "react-icons/lu";
+
 import { Link } from 'react-router-dom';
 import './Footer.css';
 
@@ -17,7 +19,7 @@ const Footer = () => {
               Empowering businesses with innovative IT solutions and smart automation.
             </p>
             <div className="footer-socials">
-              <a href="https://www.facebook.com/share/18emyiBXWj/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+              <a href="https://www.facebook.com/share/1BwXMTbEPv/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
                 <Facebook />
               </a>
               <a href="https://x.com/Adiion_" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
