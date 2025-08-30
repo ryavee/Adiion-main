@@ -9,6 +9,7 @@ import About from './Pages/About/About';
 import Blog from './Pages/Blog/Blog';
 import Careers from './Pages/Careers/Careers';
 import Contact from './Pages/Contact/Contact';
+import WhatsAppButton from './components/WhatsAppButton/WhatsAppButton';
 //IMPORTING APPDEVELOPMENT 
 function App() {
   return (
@@ -30,6 +31,7 @@ function App() {
       </main>
       
       <Footer />
+      <WhatsAppButton />
     </Router>
   );
 }
