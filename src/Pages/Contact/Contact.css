@@ -1,6 +1,11 @@
+/* === Global Contact Page Styling === */
 .contact-page {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #f5f7fa;
+  background-color: #f7f9fc;
+  background-image: radial-gradient(#dfe6f1 1px, transparent 1px);
+  background-size: 20px 20px;
+  color: #333;
+  padding-bottom: 60px;
 }
 
 /* === Banner Section === */
@@ -9,29 +14,28 @@
   background-size: cover;
   background-position: center;
   position: relative;
-  height: 70vh;
+  height: 65vh;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
   color: white;
   padding: 0 20px;
-  margin-bottom: 60px; 
+  margin-bottom: 60px;
 }
-
 
 .contact-banner::before {
   content: "";
   position: absolute;
   top: 0; left: 0;
   width: 100%; height: 100%;
-  background: rgba(0, 0, 0, 0.3);
+  background: rgba(0, 0, 0, 0.45);
   z-index: 1;
 }
 
 .banner-overlay {
+  position: relative;
   z-index: 2;
-  /* background-color: rgba(0, 0, 0, 0.55); */
   padding: 40px;
   border-radius: 12px;
   max-width: 800px;
@@ -39,32 +43,25 @@
 }
 
 .banner-overlay h2 {
-  font-size: 2.8rem;
+  font-size: 2.6rem;
   margin-bottom: 15px;
-  font-weight: 500;
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
+  font-weight: 700;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
 }
 
 .banner-overlay p {
   font-size: 1.2rem;
   line-height: 1.6;
-  font-weight: 500;
-  color: #ddd;
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+  font-weight: 400;
+  color: #eaeaea;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
 }
 
 /* === Contact Section === */
 .contact-section {
   padding: 60px 20px;
   max-width: 1200px;
-  margin-top: auto;
-}
-
-.contact-section h2 {
-  text-align: center;
-  font-size: 2.4rem;
-  color: #15157d;
-  margin-bottom: 40px;
+  margin: 0 auto;
 }
 
 .contact-main {
@@ -74,49 +71,77 @@
   gap: 40px;
 }
 
-/* Contact Details */
-.contact-left,
-.contact-right {
+/* === Card Styling (Both Left & Right) === */
+.contact-card {
   flex: 1;
-  min-width: 280px;
+  min-width: 320px;
   max-width: 500px;
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 30px 25px;
+  box-shadow: 0 10px 32px rgba(0, 0, 0, 0.55); /* Stronger shadow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.contact-left h3,
-.contact-right h3 {
-  font-size: 1.5rem;
+.contact-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 36px rgba(0, 0, 0, 0.7);
+}
+
+.contact-card h3 {
+  font-size: 1.7rem;
   color: #15157d;
   margin-bottom: 20px;
-}
-
-.contact-left p {
-  font-size: 1rem;
-  color: #333;
-  line-height: 1.8;
+  font-weight: 700;
   display: flex;
   align-items: center;
   gap: 10px;
 }
 
-.contact-left .icon {
-  color: #15157d;
-  font-size: 1.2rem;
+/* === Left Column (Contact Info + Map) === */
+.contact-left p {
+  display: flex;
+  align-items: flex-start;   /* keeps icon aligned with multi-line text */
+  gap: 12px;
+  margin-bottom: 18px;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #333;
+  line-height: 1.6;
 }
 
-/* Contact Form */
+.contact-left .icon {
+  font-size: 1.3rem;
+  color: #15157d;
+  min-width: 22px;   /* keeps all icons in one column */
+  margin-top: 3px;   /* slight adjustment for vertical balance */
+}
+
+/* Map styling */
+.map-container {
+  margin-top: 20px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+  width: 100%;
+  height: auto;
+}
+
+.map-container iframe {
+  width: 100%;
+  height: 350px;
+  border: none;
+}
+
+/* === Right Column (Contact Form) === */
 .contact-form {
   display: flex;
   flex-direction: column;
   gap: 15px;
-  background-color: #fff;
-  padding: 25px 20px;
-  border-radius: 12px;
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
-  margin-bottom: 40px;
 }
 
 .contact-form label {
-  font-weight: 500;
+  font-weight: 600;
   color: #000;
 }
 
@@ -129,6 +154,14 @@
   resize: none;
   background-color: #fff;
   width: 100%;
+  transition: all 0.2s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: #15157d;
+  box-shadow: 0 0 0 2px rgba(21, 21, 125, 0.15);
 }
 
 .contact-form button {
@@ -139,12 +172,13 @@
   border: none;
   border-radius: 6px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: all 0.3s ease;
   align-self: flex-start;
 }
 
 .contact-form button:hover {
   background-color: #0f0f63;
+  transform: translateY(-2px);
 }
 
 /* === Responsive Design === */
@@ -154,7 +188,7 @@
   }
 
   .banner-overlay p {
-    font-size: 1.1rem;
+    font-size: 1.05rem;
   }
 }
 
@@ -180,7 +214,7 @@
   }
 
   .banner-overlay {
-    padding: 30px 20px;
+    padding: 25px 15px;
   }
 
   .banner-overlay h2 {
