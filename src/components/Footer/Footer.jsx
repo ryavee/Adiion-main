@@ -1,7 +1,6 @@
 import React from 'react';
-import { Facebook, Twitter, Linkedin, Instagram } from 'lucide-react';
-import { LuFacebook } from "react-icons/lu";
-
+import { FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6"; // ✅ For X (Twitter)
 import { Link } from 'react-router-dom';
 import './Footer.css';
 
@@ -11,29 +10,29 @@ const Footer = () => {
       <div className="footer-container">
         <div className="footer-grid">
 
+          {/* Brand Section */}
           <div className="footer-section">
-            <Link to="/">
-              <span className="footer-logo">ADIION</span>
-            </Link>
+            <Link to="/" className="footer-logo">ADIION</Link>
             <p className="footer-description">
               Empowering businesses with innovative IT solutions and smart automation.
             </p>
             <div className="footer-socials">
-              <a href="https://www.facebook.com/share/1BwXMTbEPv/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
-                <Facebook />
+              <a href="https://www.facebook.com/share/1BwXMTbEPv/" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="facebook">
+                <FaFacebookF />
               </a>
-              <a href="https://x.com/Adiion_" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
-                <Twitter />
+              <a href="https://x.com/Adiion_" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)" className="twitter">
+                <FaXTwitter />
               </a>
-              <a href="https://www.linkedin.com/company/adiion/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-                <Linkedin />
+              <a href="https://www.linkedin.com/company/adiion/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="linkedin">
+                <FaLinkedinIn />
               </a>
-              <a href="https://www.instagram.com/_adiion_" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-                <Instagram />
+              <a href="https://www.instagram.com/_adiion_" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="instagram">
+                <FaInstagram />
               </a>
             </div>
           </div>
 
+          {/* Services */}
           <div className="footer-section">
             <h3>Services</h3>
             <ul>
@@ -45,6 +44,7 @@ const Footer = () => {
             </ul>
           </div>
 
+          {/* Company */}
           <div className="footer-section">
             <h3>Company</h3>
             <ul>
@@ -56,10 +56,13 @@ const Footer = () => {
             </ul>
           </div>
 
+          {/* Contact */}
           <div className="footer-section">
             <h3>Contact</h3>
             <ul>
-              <li>73C, 74C, 2<sup>nd</sup> Floor, S Park St, Secretariat Colony, Venkatapuram<br /> Ambattur, Chennai</li>
+              <li>
+                73C, 74C, 2<sup>nd</sup> Floor, S Park St, Secretariat Colony, Venkatapuram<br /> Ambattur, Chennai
+              </li>
               <li>Tamil Nadu IN 600053</li>
               <li><a href="mailto:info@adiion.com">info@adiion.com</a></li>
               <li><a href="tel:+917029395817">+91-7029395817</a></li>
@@ -68,8 +71,9 @@ const Footer = () => {
 
         </div>
 
+        {/* Bottom Bar */}
         <div className="footer-bottom">
-          <p>Copyright @ {new Date().getFullYear()} Adiion Digital Labs Private Limited | All Rights Reserved</p>
+          <p>© {new Date().getFullYear()} Adiion Digital Labs Private Limited | All Rights Reserved</p>
         </div>
       </div>
     </footer>

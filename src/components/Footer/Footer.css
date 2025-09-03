@@ -1,7 +1,9 @@
+/* === Footer Base === */
 .footer {
-  background-color: #1a1a1a;
+  background: linear-gradient(135deg, #141414, #1f1f1f);
   color: #ccc;
   padding: 60px 20px 30px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .footer-container {
@@ -15,6 +17,7 @@
   gap: 40px;
 }
 
+/* === Footer Sections === */
 .footer-section {
   color: #ccc;
 }
@@ -23,6 +26,7 @@
   color: #fff;
   font-size: 1.2rem;
   margin-bottom: 16px;
+  font-weight: 600;
 }
 
 .footer-section ul {
@@ -32,6 +36,7 @@
 
 .footer-section ul li {
   margin-bottom: 10px;
+  line-height: 1.6;
 }
 
 .footer-section ul li a {
@@ -44,35 +49,61 @@
   color: #fff;
 }
 
+/* === Logo & Description === */
 .footer-logo {
   font-size: 1.8rem;
   font-weight: bold;
   color: #fff;
+  text-decoration: none;
 }
 
 .footer-description {
   margin-top: 15px;
   font-size: 0.95rem;
   line-height: 1.6;
+  color: #bbb;
 }
 
+/* === Social Icons === */
 .footer-socials {
   display: flex;
-  gap: 16px;
+  gap: 18px;
   margin-top: 20px;
 }
 
 .footer-socials a {
-  color: #ccc;
-  transition: color 0.3s ease;
+  font-size: 1.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease, color 0.3s ease;
+  color: #aaa;
+}
+
+/* Brand Colors */
+.footer-socials a.facebook:hover {
+  color: #1877f2; /* Facebook Blue */
+}
+
+.footer-socials a.twitter:hover {
+  color: #000000; /* X Black */
+}
+
+.footer-socials a.linkedin:hover {
+  color: #0077b5; /* LinkedIn Blue */
+}
+
+.footer-socials a.instagram:hover {
+  color: #e4405f; /* Instagram Pink */
 }
 
 .footer-socials a:hover {
-  color: #fff;
+  transform: scale(1.2);
 }
 
+/* === Bottom Bar === */
 .footer-bottom {
-  border-top: 1px solid #444;
+  border-top: 1px solid #333;
   padding-top: 20px;
   margin-top: 40px;
   text-align: center;
@@ -80,7 +111,132 @@
   color: #888;
 }
 
-/* Responsive */
+/* === Responsive Layout === */
+@media (min-width: 768px) {
+  .footer-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 992px) {
+  .footer-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+/* === Footer Base === */
+.footer {
+  background: linear-gradient(135deg, #141414, #1f1f1f);
+  color: #ccc;
+  padding: 60px 20px 30px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40px;
+}
+
+/* === Footer Sections === */
+.footer-section {
+  color: #ccc;
+}
+
+.footer-section h3 {
+  color: #fff;
+  font-size: 1.2rem;
+  margin-bottom: 16px;
+  font-weight: 600;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 10px;
+  line-height: 1.6;
+}
+
+.footer-section ul li a {
+  color: #ccc;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+  color: #fff;
+}
+
+/* === Logo & Description === */
+.footer-logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer-description {
+  margin-top: 15px;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #bbb;
+}
+
+/* === Social Icons === */
+.footer-socials {
+  display: flex;
+  gap: 18px;
+  margin-top: 20px;
+}
+
+.footer-socials a {
+  font-size: 1.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease, color 0.3s ease;
+  color: #aaa;
+}
+
+/* Brand Colors */
+.footer-socials a.facebook:hover {
+  color: #1877f2; /* Facebook Blue */
+}
+
+.footer-socials a.twitter:hover {
+  color: #000000; /* X Black */
+}
+
+.footer-socials a.linkedin:hover {
+  color: #0077b5; /* LinkedIn Blue */
+}
+
+.footer-socials a.instagram:hover {
+  color: #e4405f; /* Instagram Pink */
+}
+
+.footer-socials a:hover {
+  transform: scale(1.2);
+}
+
+/* === Bottom Bar === */
+.footer-bottom {
+  border-top: 1px solid #333;
+  padding-top: 20px;
+  margin-top: 40px;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #888;
+}
+
+/* === Responsive Layout === */
 @media (min-width: 768px) {
   .footer-grid {
     grid-template-columns: repeat(2, 1fr);
