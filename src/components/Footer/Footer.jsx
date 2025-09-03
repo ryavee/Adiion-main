@@ -69,7 +69,7 @@ const Footer = () => {
         </div>
 
         <div className="footer-bottom">
-          <p>© {new Date().getFullYear()} ADIION. All rights reserved.</p>
+          <p>Copyright @ {new Date().getFullYear()} Adiion Digital Labs Private Limited | All Rights Reserved</p>
         </div>
       </div>
     </footer>
