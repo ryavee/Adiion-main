@@ -79,13 +79,13 @@
   background-color: #fff;
   border-radius: 12px;
   padding: 30px 25px;
-  box-shadow: 0 10px 32px rgba(0, 0, 0, 0.55); /* Stronger shadow */
+  box-shadow: 0 10px 32px rgba(0, 0, 0, 0.3); /* Stronger shadow */
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .contact-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 14px 36px rgba(0, 0, 0, 0.7);
+  box-shadow: 0 14px 36px rgba(0, 0, 0, 0.35);
 }
 
 .contact-card h3 {
