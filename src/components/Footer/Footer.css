@@ -14,7 +14,7 @@
 .footer-grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 40px;
+  gap: 25px;
 }
 
 /* === Footer Sections === */
@@ -27,26 +27,88 @@
   font-size: 1.2rem;
   margin-bottom: 16px;
   font-weight: 600;
+  padding-left: 20px;
 }
 
+/* === List Items with Hover Arrow (Services + Company only) === */
 .footer-section ul {
   list-style: none;
   padding: 0;
+  margin: 0;
 }
 
-.footer-section ul li {
+.footer-section ul:not(.contact-list) li {
+  position: relative;
   margin-bottom: 10px;
   line-height: 1.6;
+  padding-left: 20px; /* Reserve space for arrow */
 }
 
-.footer-section ul li a {
+.footer-section ul:not(.contact-list) li::before {
+  content: "⇀";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #fff;
+  font-size: 0.9rem;
+  opacity: 0;
+  transform: translateX(-5px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.footer-section ul:not(.contact-list) li a {
   color: #ccc;
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
-.footer-section ul li a:hover {
+.footer-section ul:not(.contact-list) li:hover a {
   color: #fff;
+}
+
+.footer-section ul:not(.contact-list) li:hover::before {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* === Contact List with Icons === */
+.contact-list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.contact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 12px;
+  line-height: 1.6;
+}
+
+.contact-item span {
+  display: block;
+  color: #ccc;
+}
+
+.contact-item a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #ccc;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.contact-item a:hover {
+  color: #fff;
+}
+
+.contact-icon {
+  color: #ccc; 
+  font-size: 1rem;
+  flex-shrink: 0;
+  margin-top: 4px;
 }
 
 /* === Logo & Description === */

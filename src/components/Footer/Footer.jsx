@@ -1,6 +1,6 @@
 import React from 'react';
-import { FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa";
-import { FaXTwitter } from "react-icons/fa6"; // ✅ For X (Twitter)
+import { FaFacebookF, FaInstagram, FaLinkedinIn, FaMapMarkerAlt, FaEnvelope, FaPhoneAlt } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
 import { Link } from 'react-router-dom';
 import './Footer.css';
 
@@ -59,15 +59,29 @@ const Footer = () => {
           {/* Contact */}
           <div className="footer-section">
             <h3>Contact</h3>
-            <ul>
-              <li>
-                73C, 74C, 2<sup>nd</sup> Floor, S Park St, Secretariat Colony, Venkatapuram<br /> Ambattur, Chennai
+            <ul className="contact-list">
+              <li className="contact-item">
+                <FaMapMarkerAlt className="contact-icon" />
+                <span>
+                  Chennai, Tamil Nadu<br />
+                  India 600053
+                </span>
               </li>
-              <li>Tamil Nadu IN 600053</li>
-              <li><a href="mailto:info@adiion.com">info@adiion.com</a></li>
-              <li><a href="tel:+917029395817">+91-7029395817</a></li>
+              <li className="contact-item">
+                <a href="mailto:info@adiion.com">
+                  <FaEnvelope className="contact-icon" />
+                  info@adiion.com
+                </a>
+              </li>
+              <li className="contact-item">
+                <a href="tel:+917029395817">
+                  <FaPhoneAlt className="contact-icon" />
+                  +91-7029395817
+                </a>
+              </li>
             </ul>
           </div>
+
 
         </div>
 

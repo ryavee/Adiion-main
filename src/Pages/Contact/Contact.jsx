@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import './Contact.css';
-import { FaMapMarkerAlt, FaEnvelope, FaPhone } from 'react-icons/fa';
+import { FaMapMarkerAlt, FaEnvelope, FaPhoneAlt } from 'react-icons/fa';
 
 const Contact = () => {
   useEffect(() => {
@@ -35,7 +35,7 @@ const Contact = () => {
               Ambattur, Chennai, Tamil Nadu, IN 600053
             </p>
             <p><FaEnvelope className="icon" /> info@adiion.com</p>
-            <p><FaPhone className="icon" /> +91-7029395817</p>
+            <p><FaPhoneAlt className="icon" /> +91-7029395817</p>
 
             {/* ✅ Google Map Embed */}
             <div className="map-container">
