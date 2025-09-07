@@ -1,27 +1,18 @@
 import React from "react";
+import { BsWhatsapp } from "react-icons/bs";
 
 const WhatsAppButton = () => {
   return (
-    <a
-      href="https://wa.me/917029395817"
-      target="_blank"
-      rel="noopener noreferrer"
-      className="fixed bottom-4 right-4 
-                 rounded-xl shadow-lg transition-all duration-300 z-50 flex items-center justify-center 
-                 w-12 h-12 sm:w-14 sm:h-14
-                 bg-gradient-to-br from-green-400 via-[#25D366] to-green-700 
-                 hover:scale-110"
-    >
-      {/* ✅ Bigger icon inside same button size */}
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 32 32"
-        className="w-9 h-9 sm:w-10 sm:h-10"
-        fill="white"
-      >
-        <path d="M16 3C9.373 3 4 8.373 4 15c0 2.643.845 5.088 2.276 7.087L4 29l7.145-2.262A11.94 11.94 0 0 0 16 27c6.627 0 12-5.373 12-12S22.627 3 16 3zm0 22a9.935 9.935 0 0 1-5.063-1.378l-.363-.214-4.25 1.344 1.385-4.135-.237-.377A9.944 9.944 0 0 1 6 15c0-5.514 4.486-10 10-10s10 4.486 10 10-4.486 10-10 10zm5.469-7.66c-.297-.149-1.758-.867-2.031-.967s-.469-.149-.664.15-.762.966-.934 1.164-.344.224-.641.075c-.297-.149-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.172-.297-.018-.458.13-.606.134-.133.298-.346.446-.52.149-.174.199-.298.298-.497.099-.198.05-.373-.025-.522s-.664-1.603-.911-2.196c-.24-.577-.484-.498-.664-.508-.172-.009-.372-.011-.572-.011-.199 0-.522.075-.796.373-.274.298-1.045 1.02-1.045 2.486s1.07 2.876 1.219 3.074c.149.198 2.106 3.218 5.106 4.508.714.308 1.27.492 1.704.63.715.228 1.365.196 1.879.119.573-.085 1.758-.719 2.006-1.412.248-.694.248-1.289.173-1.412-.074-.124-.272-.198-.57-.347z"/>
-      </svg>
-    </a>
+   <a
+  href="https://wa.me/917029395817"
+  target="_blank"
+  rel="noopener noreferrer"
+  aria-label="Chat with us on WhatsApp"
+  className="fixed bottom-4 right-4 rounded-xl transition-all duration-300 z-50 flex items-center justify-center w-12 h-12 sm:w-14 sm:h-14 bg-gradient-to-br from-green-400 via-[#25D366] to-green-700 hover:scale-110"
+>
+  <BsWhatsapp className="w-9 h-9 sm:w-10 sm:h-10 text-white" />
+</a>
+
   );
 };
 
