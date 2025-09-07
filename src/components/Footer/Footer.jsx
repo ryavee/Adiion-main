@@ -36,11 +36,11 @@ const Footer = () => {
           <div className="footer-section">
             <h3>Services</h3>
             <ul>
-              <li><Link to="/services">Data Solutions</Link></li>
-              <li><Link to="/services">Web Development</Link></li>
-              <li><Link to="/services">Mobile Apps</Link></li>
-              <li><Link to="/services">AI & Automation</Link></li>
-              <li><Link to="/services">Cloud Services</Link></li>
+              <li><a href="/services">Data Solutions</a></li>
+              <li><a href="/services">Web Development</a></li>
+              <li><a href="/services">Mobile Apps</a></li>
+              <li><a href="/services">AI & Automation</a></li>
+              <li><a href="/services">Cloud Services</a></li>
             </ul>
           </div>
 
@@ -48,11 +48,12 @@ const Footer = () => {
           <div className="footer-section">
             <h3>Company</h3>
             <ul>
-              <li><Link to="/services">Services</Link></li>
-              <li><Link to="/about">About</Link></li>
-              <li><Link to="/blog">Blog</Link></li>
-              <li><Link to="/careers">Career</Link></li>
-              <li><Link to="/contact">Contact</Link></li>
+              <li><a href="/services">Services</a></li>
+
+              <li><a href="/about">About</a></li>
+              <li><a href="/blog">Blog</a></li>
+              <li><a href="/careers">Career</a></li>
+              <li><a href="/contact">Contact</a></li>
             </ul>
           </div>
 
