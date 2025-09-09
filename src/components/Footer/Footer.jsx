@@ -1,10 +1,19 @@
 import React from 'react';
 import { FaFacebookF, FaInstagram, FaLinkedinIn, FaMapMarkerAlt, FaEnvelope, FaPhoneAlt } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import './Footer.css';
 
 const Footer = () => {
+  const location = useLocation();
+
+  // Scroll to top on link click (even if already on same page)
+  const handleNavigation = (path) => {
+    if (location.pathname === path) {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  };
+
   return (
     <footer className="footer">
       <div className="footer-container">
@@ -12,7 +21,7 @@ const Footer = () => {
 
           {/* Brand Section */}
           <div className="footer-section">
-            <Link to="/" className="footer-logo">ADIION</Link>
+            <Link to="/" onClick={() => handleNavigation('/')} className="footer-logo">ADIION</Link>
             <p className="footer-description">
               Empowering businesses with innovative IT solutions and smart automation.
             </p>
@@ -36,11 +45,11 @@ const Footer = () => {
           <div className="footer-section">
             <h3>Services</h3>
             <ul>
-              <li><a href="/services">Data Solutions</a></li>
-              <li><a href="/services">Web Development</a></li>
-              <li><a href="/services">Mobile Apps</a></li>
-              <li><a href="/services">AI & Automation</a></li>
-              <li><a href="/services">Cloud Services</a></li>
+              <li><Link to="/services" onClick={() => handleNavigation('/services')}>Data Solutions</Link></li>
+              <li><Link to="/services" onClick={() => handleNavigation('/services')}>Web Development</Link></li>
+              <li><Link to="/services" onClick={() => handleNavigation('/services')}>Mobile Apps</Link></li>
+              <li><Link to="/services" onClick={() => handleNavigation('/services')}>AI & Automation</Link></li>
+              <li><Link to="/services" onClick={() => handleNavigation('/services')}>Cloud Services</Link></li>
             </ul>
           </div>
 
@@ -48,12 +57,11 @@ const Footer = () => {
           <div className="footer-section">
             <h3>Company</h3>
             <ul>
-              <li><a href="/services">Services</a></li>
-
-              <li><a href="/about">About</a></li>
-              <li><a href="/blog">Blog</a></li>
-              <li><a href="/careers">Career</a></li>
-              <li><a href="/contact">Contact</a></li>
+              <li><Link to="/services" onClick={() => handleNavigation('/services')}>Services</Link></li>
+              <li><Link to="/about" onClick={() => handleNavigation('/about')}>About</Link></li>
+              <li><Link to="/blog" onClick={() => handleNavigation('/blog')}>Blog</Link></li>
+              <li><Link to="/careers" onClick={() => handleNavigation('/careers')}>Career</Link></li>
+              <li><Link to="/contact" onClick={() => handleNavigation('/contact')}>Contact</Link></li>
             </ul>
           </div>
 
@@ -82,8 +90,6 @@ const Footer = () => {
               </li>
             </ul>
           </div>
-
-
         </div>
 
         {/* Bottom Bar */}
