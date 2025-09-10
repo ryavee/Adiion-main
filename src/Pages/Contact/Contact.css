@@ -136,10 +136,13 @@
 }
 
 /* === Contact Form Styling === */
-.contact-form {
+.contact-form button {
   display: flex;
-  flex-direction: column;
-  gap: 15px;
+  align-items: center;
+  gap: 8px;   /* space between icon and text */
+}
+.btn-icon {
+  font-size: 1rem;
 }
 
 .contact-form label {

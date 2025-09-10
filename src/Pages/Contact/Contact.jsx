@@ -1,15 +1,17 @@
 import React, { useEffect } from 'react';
 import './Contact.css';
 import { FaMapMarkerAlt, FaEnvelope, FaPhoneAlt } from 'react-icons/fa';
+import { MdSend } from "react-icons/md";
+
 
 const Contact = () => {
   useEffect(() => {
-    window.scrollTo(0, 0);
+    window.scrollTo(0, 0); // Scroll to top on mount
   }, []);
 
   return (
     <div className="contact-page">
-      {/* Banner */}
+      {/* Banner Section */}
       <section className="contact-banner">
         <div className="banner-overlay">
           <h2>Why Contact Us?</h2>
@@ -24,11 +26,9 @@ const Contact = () => {
       {/* Contact Section */}
       <section className="contact-section" id="contact">
         <div className="contact-main">
-
-          {/* Row with Form (left) + Info (right) */}
           <div className="contact-row">
 
-            {/* Form Card */}
+            {/* Left Side - Contact Form */}
             <div className="contact-card contact-form-card">
               <h3>Send Us a Message</h3>
               <form className="contact-form" onSubmit={(e) => e.preventDefault()}>
@@ -41,22 +41,24 @@ const Contact = () => {
                 <label htmlFor="message">Your Message</label>
                 <textarea id="message" placeholder="Write your message..." rows="5" required></textarea>
 
-                <button type="submit">Send Message</button>
+                <button type="submit">
+                  < MdSend className="btn-icon" /> Send Message
+                </button>
               </form>
             </div>
 
-            {/* Info Card with Map inside */}
+            {/* Right Side - Contact Info + Map */}
             <div className="contact-card contact-info-card">
               <h3>Our Office</h3>
               <p>
                 <FaMapMarkerAlt className="icon" />
-                73C, 74C, 2nd Floor, S Park St, Secretariat Colony, Venkatapuram,
+                73C, 74C, 2nd Floor, S Park St, Secretariat Colony, Venkatapuram
                 Ambattur, Chennai, Tamil Nadu, IN 600053
               </p>
               <p><FaEnvelope className="icon" /> info@adiion.com</p>
               <p><FaPhoneAlt className="icon" /> +91-7029395817</p>
 
-              {/* Map directly below the info */}
+              {/* Map */}
               <div className="map-container">
                 <iframe
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3885.6810550783025!2d80.14853247321275!3d13.119380411624856!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a52637f41897ffd%3A0x261f50bf454406e4!2sAdiion%20Digital%20Labs%20Pvt%20Ltd!5e0!3m2!1sen!2sin!4v1756580203816!5m2!1sen!2sin"
