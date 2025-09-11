@@ -112,6 +112,7 @@
   font-weight: 500;
   color: #333;
   line-height: 1.6;
+
 }
 
 .contact-info-card .icon {
@@ -128,6 +129,9 @@
   overflow: hidden;
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
 }
+
+
+
 
 .map-container iframe {
   width: 100%;
@@ -178,12 +182,16 @@
   cursor: pointer;
   transition: all 0.3s ease;
   align-self: flex-start;
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 
 .contact-form button:hover {
   background-color: #0f0f63;
-  transform: translateY(-2px);
+  transform: scale(1.05);   /* expand instead of shifting */
 }
+
 
 /* === Responsive === */
 @media (max-width: 768px) {
