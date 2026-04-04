@@ -6,6 +6,7 @@ import logoImg from './logo2.png'; // Adjust the path as per your project struct
 const Header = () => {
   const [isTransparent, setIsTransparent] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const [productsOpen, setProductsOpen] = useState(false);
   const location = useLocation();
 
   useEffect(() => {
@@ -18,8 +19,9 @@ const Header = () => {
   }, []);
 
   useEffect(() => {
-    setMenuOpen(false);
-  }, [location]);
+  setMenuOpen(false);
+  setProductsOpen(false); 
+}, [location]);
 
   return (
     <header className={`header ${isTransparent ? 'transparent' : ''}`}>
@@ -38,6 +40,20 @@ const Header = () => {
           <div className="nav-left">
             <Link to="/" className={location.pathname === '/' ? 'active' : ''}>Home</Link>
             <Link to="/services" className={location.pathname === '/services' ? 'active' : ''}>Services</Link>
+
+            {/* NEW PRODUCTS DROPDOWN */}
+            <div
+              className="nav-item dropdown"
+              onMouseEnter={() => setProductsOpen(true)}
+              onMouseLeave={() => setProductsOpen(false)}
+            >
+              <span className="dropdown-title">Products</span>
+
+              <div className={`dropdown-menu ${productsOpen ? 'show' : ''}`}>
+                <Link to="/certo">Certo</Link>
+              </div>
+            </div>
+
             <Link to="/about" className={location.pathname === '/about' ? 'active' : ''}>About</Link>
             <Link to="/blog" className={location.pathname === '/blog' ? 'active' : ''}>Blog</Link>
             <Link to="/careers" className={location.pathname === '/careers' ? 'active' : ''}>Careers</Link>
