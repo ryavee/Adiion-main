@@ -17,7 +17,10 @@ const Cetrak = () => {
           {/* LEFT */}
           <div className="cetrak-hero__left">
             <h1 className="cetrak-hero__title">
-              Turn Every Product into a <span>Smart Digital Asset</span>
+              Turn Every Product into a{" "}
+              <span className="typing-text">
+                <span className="typed-word">Smart Digital Asset</span>
+              </span>
             </h1>
 
             <p className="cetrak-hero__desc">
@@ -27,7 +30,7 @@ const Cetrak = () => {
             </p>
 
             <div className="cetrak-hero__buttons">
-              <button className="btn btn-primary">🚀 Request Demo</button>
+              <button className="btn btn-primary">Request Demo</button>
               <button className="btn btn-secondary">Contact Us</button>
             </div>
 
