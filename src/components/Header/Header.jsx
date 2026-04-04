@@ -50,7 +50,7 @@ const Header = () => {
               <span className="dropdown-title">Products</span>
 
               <div className={`dropdown-menu ${productsOpen ? 'show' : ''}`}>
-                <Link to="/certo">Certo</Link>
+                <Link to="/certo">Certak</Link>
               </div>
             </div>
 

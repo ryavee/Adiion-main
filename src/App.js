@@ -9,7 +9,7 @@ import About from './Pages/About/About';
 import Blog from './Pages/Blog/Blog';
 import Careers from './Pages/Careers/Careers';
 import Contact from './Pages/Contact/Contact';
-import Certo from './Pages/Certo/Certo';
+import Certo from './Pages/Cetrak/Cetrak';
 import WhatsAppButton from './components/WhatsAppButton/WhatsAppButton';
 
 function App() {
