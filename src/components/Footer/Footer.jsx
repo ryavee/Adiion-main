@@ -65,6 +65,18 @@ const Footer = () => {
             </ul>
           </div>
 
+          {/* Products */}
+          <div className="footer-section">
+            <h3>Products</h3>
+            <ul>
+              <li>
+                <Link to="/certo" onClick={() => handleNavigation('/certo')}>
+                  Certo
+                </Link>
+              </li>
+            </ul>
+          </div>
+
           {/* Contact */}
           <div className="footer-section">
             <h3>Contact</h3>

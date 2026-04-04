@@ -1,16 +1,14 @@
 import React from 'react';
-import { FaLaptopCode, FaCloud, FaHeadset, FaDatabase, FaArrowRight } from 'react-icons/fa';
+import { FaLaptopCode, FaCloud, FaHeadset, FaDatabase, FaArrowRight, FaBoxOpen } from 'react-icons/fa';
 import './ServicesPreview.css';
 import { Link } from 'react-router-dom';
 
 const services = [
-  
   {
     title: 'Data Solutions',
     icon: <FaDatabase className="service-icon" />,
     description: 'Unlock insights with advanced data management and analytics.',
   },
-  
   {
     title: 'Development',
     icon: <FaLaptopCode className="service-icon" />,
@@ -26,7 +24,7 @@ const services = [
     icon: <FaHeadset className="service-icon" />,
     description: 'Reliable support to keep your operations running smoothly.',
   },
-]
+];
 
 const ServicesPreview = () => {
   return (
@@ -43,6 +41,19 @@ const ServicesPreview = () => {
             </Link>
           </div>
         ))}
+      </div>
+      <div className="product-preview-section">
+        <h3 className="product-preview-title">Featured Product</h3>
+        <Link to="/certo" className="product-card-link">
+          <div className="product-card">
+            <div className="product-card-content">
+              <FaBoxOpen className="service-icon" />
+              <h3>Hover Here</h3>
+              <p>Hover to reveal the product name, then click to visit Certo.</p>
+            </div>
+            <span className="product-label">Certo</span>
+          </div>
+        </Link>
       </div>
       <Link to="/services" className="view-more-btn">More Services</Link>
     </section>

@@ -9,12 +9,14 @@ import About from './Pages/About/About';
 import Blog from './Pages/Blog/Blog';
 import Careers from './Pages/Careers/Careers';
 import Contact from './Pages/Contact/Contact';
+import Certo from './Pages/Certo/Certo';
 import WhatsAppButton from './components/WhatsAppButton/WhatsAppButton';
-//IMPORTING APPDEVELOPMENT 
+
 function App() {
   return (
     <Router>
       <Header />
+
       <main style={{ minHeight: '80vh' }}>
         <Routes>
           <Route path="/" element={<Home />} />
@@ -23,15 +25,12 @@ function App() {
           <Route path="/blog" element={<Blog />} />
           <Route path="/careers" element={<Careers />} />
           <Route path="/contact" element={<Contact />} />
-          
-          
-
+          <Route path="/certo" element={<Certo />} />
         </Routes>
-
       </main>
-      
-      <Footer />
+
       <WhatsAppButton />
+      <Footer />
     </Router>
   );
 }
