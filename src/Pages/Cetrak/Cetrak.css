@@ -1,3 +1,4 @@
+/* BASE */
 .cetrak {
   background: radial-gradient(circle at top, #0f172a, #020617);
   color: white;
@@ -5,13 +6,64 @@
 }
 
 /* HERO */
-.hero {
-  text-align: center;
-  padding: 140px 20px;
+.cetrak-hero {
+  padding: 120px 20px;
   position: relative;
+  background: radial-gradient(circle at top, #111827, #020617);
 }
 
-.hero-glow {
+/* HERO CONTAINER */
+.cetrak-hero__container {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  /* 🔥 THIS MAKES IT VERTICAL */
+  align-items: center;
+  /* 🔥 CENTER HORIZONTALLY */
+  text-align: center;
+  /* 🔥 CENTER TEXT */
+}
+
+/* LEFT SECTION */
+.cetrak-hero__left {
+  width: 100%;
+  max-width: 800px;
+  /* keeps content nicely centered */
+}
+
+.cetrak-hero__title {
+  font-size: 3.5rem;
+  font-weight: 800;
+}
+
+.cetrak-hero__title span {
+  background: linear-gradient(135deg, #3b82f6, #22c55e);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.cetrak-hero__desc {
+  margin: 20px 0;
+  color: #9ca3af;
+}
+
+.cetrak-hero__buttons {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;  /* center buttons */
+  gap: 10px;
+}
+
+.cetrak-hero__trust {
+  margin-top: 15px;
+  color: #6b7280;
+   text-align: center;
+
+}
+
+
+.cetrak-hero__glow {
   position: absolute;
   width: 400px;
   height: 400px;
@@ -22,96 +74,70 @@
   transform: translateX(-50%);
 }
 
-.hero h1 {
-  font-size: 3.5rem;
-  font-weight: 800;
-}
-
-.hero h1 span {
-  background: linear-gradient(135deg, #3b82f6, #22c55e);
-  -webkit-background-clip: text;
-  color: transparent;
-}
-
-.hero p {
-  max-width: 650px;
-  margin: 20px auto;
-  color: #9ca3af;
-  font-size: 1.1rem;
-}
-
-.hero-buttons {
-  margin-top: 25px;
-}
-
-.primary-btn {
-  background: linear-gradient(135deg, #2563eb, #22c55e);
+/* BUTTONS */
+.btn {
   padding: 14px 28px;
   border-radius: 10px;
   border: none;
-  font-weight: 600;
   cursor: pointer;
-  transition: 0.3s;
+  font-weight: 600;
 }
 
-.primary-btn:hover {
-  transform: translateY(-3px) scale(1.02);
-  box-shadow: 0 15px 30px rgba(34, 197, 94, 0.25);
+.btn-primary {
+  background: linear-gradient(135deg, #2563eb, #22c55e);
+  color: #fff;
+  margin-right: 10px;
 }
 
-.secondary-btn {
+.btn-primary:hover {
+  transform: translateY(-3px);
+}
+
+.btn-secondary {
   border: 1px solid #444;
-  padding: 14px 28px;
-  margin-left: 10px;
-  border-radius: 10px;
   background: transparent;
-}
-
-.trust {
-  margin-top: 20px;
-  color: #6b7280;
+  color: white;
 }
 
 /* SECTIONS */
-.section {
+.cetrak-section {
   padding: 100px 20px;
   text-align: center;
 }
 
-.section h2 {
+.cetrak-section__title {
   font-size: 2.2rem;
   margin-bottom: 50px;
 }
 
-/* CARDS */
-.grid {
+/* GRID */
+.cetrak-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
   gap: 25px;
 }
 
-.card {
+.cetrak-card {
   background: rgba(255, 255, 255, 0.04);
   padding: 25px;
   border-radius: 16px;
-  backdrop-filter: blur(12px);
   transition: 0.3s;
 }
 
-.card:hover {
+.cetrak-card:hover {
   transform: translateY(-8px);
   border: 1px solid #22c55e;
 }
 
 /* STEPS */
-.steps {
+.cetrak-steps {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 20px;
 }
 
-.step {
+.cetrak-step {
   background: #111827;
   padding: 14px 20px;
   border-radius: 30px;
@@ -119,29 +145,24 @@
   gap: 10px;
 }
 
-.step span {
+.cetrak-step span {
   background: #22c55e;
   padding: 6px 10px;
   border-radius: 50%;
 }
 
 /* PRICING */
-.pricing {
+.cetrak-pricing {
   display: flex;
   justify-content: center;
   gap: 25px;
 }
 
-.price-card {
+.cetrak-price-card {
   background: #111827;
   padding: 30px;
   border-radius: 16px;
   width: 220px;
-  transition: 0.3s;
-}
-
-.price-card:hover {
-  transform: scale(1.05);
 }
 
 .highlight {
@@ -149,8 +170,16 @@
 }
 
 /* CTA */
-.cta {
+.cetrak-cta {
   padding: 100px 20px;
   text-align: center;
   background: linear-gradient(135deg, #2563eb, #22c55e);
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .cetrak-hero__container {
+    flex-direction: column;
+    text-align: center;
+  }
 }
