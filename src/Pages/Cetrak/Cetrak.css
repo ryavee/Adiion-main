@@ -1,0 +1,156 @@
+.cetrak {
+  background: radial-gradient(circle at top, #0f172a, #020617);
+  color: white;
+  overflow-x: hidden;
+}
+
+/* HERO */
+.hero {
+  text-align: center;
+  padding: 140px 20px;
+  position: relative;
+}
+
+.hero-glow {
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, #3b82f6, transparent);
+  filter: blur(120px);
+  top: -100px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.hero h1 {
+  font-size: 3.5rem;
+  font-weight: 800;
+}
+
+.hero h1 span {
+  background: linear-gradient(135deg, #3b82f6, #22c55e);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.hero p {
+  max-width: 650px;
+  margin: 20px auto;
+  color: #9ca3af;
+  font-size: 1.1rem;
+}
+
+.hero-buttons {
+  margin-top: 25px;
+}
+
+.primary-btn {
+  background: linear-gradient(135deg, #2563eb, #22c55e);
+  padding: 14px 28px;
+  border-radius: 10px;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.primary-btn:hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 15px 30px rgba(34, 197, 94, 0.25);
+}
+
+.secondary-btn {
+  border: 1px solid #444;
+  padding: 14px 28px;
+  margin-left: 10px;
+  border-radius: 10px;
+  background: transparent;
+}
+
+.trust {
+  margin-top: 20px;
+  color: #6b7280;
+}
+
+/* SECTIONS */
+.section {
+  padding: 100px 20px;
+  text-align: center;
+}
+
+.section h2 {
+  font-size: 2.2rem;
+  margin-bottom: 50px;
+}
+
+/* CARDS */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 25px;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.04);
+  padding: 25px;
+  border-radius: 16px;
+  backdrop-filter: blur(12px);
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  border: 1px solid #22c55e;
+}
+
+/* STEPS */
+.steps {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.step {
+  background: #111827;
+  padding: 14px 20px;
+  border-radius: 30px;
+  display: flex;
+  gap: 10px;
+}
+
+.step span {
+  background: #22c55e;
+  padding: 6px 10px;
+  border-radius: 50%;
+}
+
+/* PRICING */
+.pricing {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+}
+
+.price-card {
+  background: #111827;
+  padding: 30px;
+  border-radius: 16px;
+  width: 220px;
+  transition: 0.3s;
+}
+
+.price-card:hover {
+  transform: scale(1.05);
+}
+
+.highlight {
+  border: 2px solid #22c55e;
+}
+
+/* CTA */
+.cta {
+  padding: 100px 20px;
+  text-align: center;
+  background: linear-gradient(135deg, #2563eb, #22c55e);
+}

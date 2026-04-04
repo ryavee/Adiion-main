@@ -71,7 +71,7 @@ const Footer = () => {
             <ul>
               <li>
                 <Link to="/certo" onClick={() => handleNavigation('/certo')}>
-                  Certo
+                  Certrak
                 </Link>
               </li>
             </ul>
