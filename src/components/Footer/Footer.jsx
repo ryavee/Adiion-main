@@ -70,8 +70,8 @@ const Footer = () => {
             <h3>Products</h3>
             <ul>
               <li>
-                <Link to="/certo" onClick={() => handleNavigation('/certo')}>
-                  Certrak
+                <Link to="/cetrak" onClick={() => handleNavigation('/cetrak')}>
+                  Cetrak
                 </Link>
               </li>
             </ul>
