@@ -184,3 +184,10 @@
   }
 }
 
+.cetrak-center-text {
+  max-width: 600px;
+  margin: auto;
+  color: #9ca3af;
+  margin-bottom: 30px;
+}
+

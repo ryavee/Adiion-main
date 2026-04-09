@@ -1,0 +1,96 @@
+.demo {
+  background: radial-gradient(circle at top, #0f172a, #020617);
+  color: white;
+}
+
+/* HERO */
+.demo-hero {
+  text-align: center;
+  padding: 100px 20px 40px;
+}
+
+.demo-hero h1 {
+  font-size: 3rem;
+  font-weight: 800;
+}
+
+.demo-hero p {
+  color: #9ca3af;
+  margin-top: 10px;
+}
+
+/* FORM SECTION */
+.demo-form-section {
+  padding: 60px 20px;
+}
+
+.demo-container {
+  max-width: 1100px;
+  margin: auto;
+  display: flex;
+  gap: 50px;
+}
+
+/* FORM */
+.demo-form {
+  flex: 1;
+  background: rgba(255,255,255,0.04);
+  padding: 30px;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.demo-form input,
+.demo-form textarea {
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+}
+
+.demo-form textarea {
+  min-height: 100px;
+}
+
+/* BUTTON */
+.btn-primary {
+  background: linear-gradient(135deg, #2563eb, #22c55e);
+  padding: 12px;
+  border-radius: 8px;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+/* SIDE INFO */
+.demo-info {
+  flex: 1;
+}
+
+.demo-info h3 {
+  margin-bottom: 15px;
+}
+
+.demo-info ul {
+  list-style: none;
+  padding: 0;
+}
+
+.demo-info li {
+  margin-bottom: 10px;
+  color: #9ca3af;
+}
+
+.demo-trust {
+  margin-top: 20px;
+  color: #6b7280;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .demo-container {
+    flex-direction: column;
+  }
+}
