@@ -10,6 +10,7 @@ import Blog from './Pages/Blog/Blog';
 import Careers from './Pages/Careers/Careers';
 import Contact from './Pages/Contact/Contact';
 import Cetrak from './Pages/Cetrak/Cetrak';
+import BookDemo from './Pages/Cetrak/BookDemo';
 import WhatsAppButton from './components/WhatsAppButton/WhatsAppButton';
 
 function App() {
@@ -26,6 +27,7 @@ function App() {
           <Route path="/careers" element={<Careers />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/cetrak" element={<Cetrak />} />
+          <Route path="/demo" element={<BookDemo />} />
         </Routes>
       </main>
 
