@@ -55,10 +55,9 @@ const BookDemo = () => {
 
       {/* HERO */}
       <section className="text-center pt-28 pb-12 px-5">
-        <h1 className="text-5xl font-extrabold">Book a Demo</h1>
+        <h1 className="text-5xl font-extrabold">See CETRAK in Action</h1>
         <p className="mt-3 text-gray-400 max-w-xl mx-auto">
-          See how <strong>CETRAK</strong> can help you track products,
-          eliminate counterfeits, and gain real-time insights.
+          Discover how <strong>CETRAK</strong> helps you track products, stop counterfeits, and gain real-time insights.
         </p>
       </section>
 
