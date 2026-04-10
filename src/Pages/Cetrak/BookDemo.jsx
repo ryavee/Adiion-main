@@ -12,6 +12,7 @@ const BookDemo = () => {
 
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState(false);
+  const [focused, setFocused] = useState("");
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -55,10 +56,9 @@ const BookDemo = () => {
 
       {/* HERO */}
       <section className="text-center pt-28 pb-12 px-5">
-        <h1 className="text-5xl font-extrabold">Book a Demo</h1>
+        <h1 className="text-5xl font-extrabold">See CETRAK in Action</h1>
         <p className="mt-3 text-gray-400 max-w-xl mx-auto">
-          See how <strong>CETRAK</strong> can help you track products,
-          eliminate counterfeits, and gain real-time insights.
+          Discover how <strong>CETRAK</strong> helps you track products, stop counterfeits, and gain real-time insights.
         </p>
       </section>
 
@@ -83,24 +83,27 @@ const BookDemo = () => {
               { name: "phone", label: "Phone Number", type: "tel" },
             ].map((field, i) => (
               <div key={i} className="relative">
+
                 <input
                   type={field.type}
                   name={field.name}
                   value={formData[field.name]}
                   onChange={handleChange}
+                  onFocus={() => setFocused(field.name)}
+                  onBlur={() => setFocused("")}
                   required
-                  placeholder=" "
-                  className="peer w-full px-4 pt-5 pb-3 rounded-xl bg-white/5 border border-white/10 text-white outline-none focus:border-green-400 focus:ring-2 focus:ring-green-400/30 transition"
+                  className="w-full px-4 pt-5 pb-3 rounded-xl bg-white/5 border border-white/10 text-white outline-none focus:border-green-400 focus:ring-2 focus:ring-green-400/30 transition"
                 />
-                <label className="absolute left-4 top-3 text-sm text-gray-400 transition-all 
-                  peer-placeholder-shown:top-4 
-                  peer-placeholder-shown:text-base 
-                  peer-focus:top-2 
-                  peer-focus:text-xs 
-                  peer-focus:text-green-400">
+                <label
+                  className={`absolute left-4 transition-all duration-200 ${focused === field.name || formData[field.name]
+                    ? "top-2 text-xs text-green-400"
+                    : "top-4 text-base text-gray-400"
+                    }`}
+                >
                   {field.label}
                 </label>
               </div>
+
             ))}
 
             {/* TEXTAREA */}
@@ -109,15 +112,17 @@ const BookDemo = () => {
                 name="message"
                 value={formData.message}
                 onChange={handleChange}
-                placeholder=" "
-                className="peer w-full px-4 pt-5 pb-3 rounded-xl bg-white/5 border border-white/10 text-white outline-none min-h-[120px] resize-none focus:border-green-400 focus:ring-2 focus:ring-green-400/30 transition"
+                onFocus={() => setFocused("message")}
+                onBlur={() => setFocused("")}
+                className="w-full px-4 pt-5 pb-3 rounded-xl bg-white/5 border border-white/10 text-white outline-none min-h-[120px] resize-none focus:border-green-400 focus:ring-2 focus:ring-green-400/30 transition"
               />
-              <label className="absolute left-4 top-3 text-sm text-gray-400 transition-all 
-                peer-placeholder-shown:top-4 
-                peer-placeholder-shown:text-base 
-                peer-focus:top-2 
-                peer-focus:text-xs 
-                peer-focus:text-green-400">
+
+              <label
+                className={`absolute left-4 transition-all duration-200 ${focused === "message" || formData.message
+                    ? "top-2 text-xs text-green-400"
+                    : "top-4 text-base text-gray-400"
+                  }`}
+              >
                 Your Message
               </label>
             </div>
@@ -157,8 +162,8 @@ const BookDemo = () => {
             </p>
           </div>
         </div>
-      </section>
-    </div>
+      </section >
+    </div >
   );
 };
 
