@@ -19,7 +19,7 @@ const Cetrak = () => {
 
           <div className="w-full max-w-3xl">
             <h1 className="text-5xl font-extrabold">
-              Turn Every Product into a{" "}
+              Turn Every Product into a <br /> 
               <span className="bg-gradient-to-r from-blue-500 to-green-400 bg-clip-text text-transparent">
                 Smart Digital Asset
               </span>
