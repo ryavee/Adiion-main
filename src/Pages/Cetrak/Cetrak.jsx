@@ -54,9 +54,7 @@ const Cetrak = () => {
         </div>
       </section>
 
-      {/* COMMON SECTION WRAPPER */}
-      {/** reusable class idea */}
-      {/** py-24 px-5 text-center */}
+      
 
       {/* PROBLEMS */}
       <section className="py-24 px-5 text-center">
@@ -161,14 +159,14 @@ const Cetrak = () => {
         <div className="mt-6 flex justify-center gap-3">
           <Link
             to="/demo"
-            className="px-7 py-3 bg-white text-black rounded-lg font-semibold"
+            className="px-7 py-3 rounded-lg bg-gradient-to-r from-blue-600 to-green-500 font-semibold hover:-translate-y-1 transition"
           >
             Request Demo
           </Link>
 
           <Link
             to="/contact"
-            className="px-7 py-3 border border-white rounded-lg"
+            className="px-7 py-3 rounded-lg border border-gray-600"
           >
             Contact Us
           </Link>

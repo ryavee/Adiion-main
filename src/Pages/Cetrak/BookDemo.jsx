@@ -118,7 +118,7 @@ const BookDemo = () => {
                 peer-focus:top-2 
                 peer-focus:text-xs 
                 peer-focus:text-green-400">
-                Your Use Case
+                Your Message
               </label>
             </div>
 
