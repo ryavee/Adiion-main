@@ -32,7 +32,7 @@ const Header = () => {
 
         {/* LOGO */}
         <Link to="/" className="flex items-center">
-          <img src={logoImg} alt="Adiion Logo" className="h-[70px] mt-2" />
+          <img src={logoImg} alt="Adiion Logo" className="h-[80px] mt-2" />
         </Link>
 
         {/* HAMBURGER */}
